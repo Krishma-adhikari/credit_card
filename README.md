@@ -1,8 +1,7 @@
-# 💳 Credit Card Fraud Detection using Machine Learning
+# 💳 Credit Card Fraud Detection | Machine Learning Classification Project
 
 ## 📌 Project Overview
-This project focuses on detecting fraudulent credit card transactions using machine learning models.  
-The dataset is highly imbalanced, so model evaluation is based on precision, recall, and F1-score instead of accuracy.
+This project compares multiple machine learning models to detect fraudulent credit card transactions using a real-world highly imbalanced dataset.
 
 ---
 
@@ -11,7 +10,7 @@ The dataset is highly imbalanced, so model evaluation is based on precision, rec
 - Records: ~284,000 transactions  
 - Features: 30 (PCA-transformed features V1–V28 + Time + Amount)  
 - Target Variable:
-  - 0 → Legitimate transaction  
+  - 0 → Legitimate transaction
   - 1 → Fraudulent transaction  
 
 Dataset link:  
@@ -19,10 +18,19 @@ https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 ---
 
+## 🛠️ Tech Stack
+- Python  
+- Pandas  
+- Scikit-learn  
+- Plotly  
+- Kaleido  
+
+---
+
 ## ⚙️ Workflow
 - Data cleaning (removed duplicate records)
 - Feature scaling using StandardScaler
-- Stratified train-test split (80/20)
+- Train-test split (80/20, stratified to handle class imbalance)
 - Model training:
   - Logistic Regression
   - K-Nearest Neighbors (KNN)
@@ -46,18 +54,18 @@ https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 ---
 
 ## 🏆 Best Model
-The Random Forest Classifier performed best due to:
+Random Forest Classifier performed best due to:
 - Highest F1-score
 - Strong precision (low false positives)
 - Good recall (detects most fraud cases)
 
 ---
----
 
 ## 📌 Conclusion
 This project demonstrates the importance of handling imbalanced datasets in machine learning.
 
-Although all models showed high accuracy, accuracy alone was misleading due to extreme class imbalance. Therefore, precision, recall, and F1-score were used as the main evaluation metrics.
+Although all models achieved high accuracy, accuracy alone is misleading due to class imbalance.  
+Therefore, precision, recall, and F1-score were used for evaluation.
 
 👉 Final takeaway:  
-Random Forest is the most suitable model for fraud detection in this dataset.
+Random Forest is the most suitable model for credit card fraud detection.
